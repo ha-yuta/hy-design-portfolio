@@ -53,9 +53,7 @@ const Header = () => {
               alt="HYデザイン"
               width={90}
               height={85}
-              className={`h-12 w-auto transition-all duration-300 ${
-                isScrolled ? "brightness-0" : ""
-              }`}
+              className="h-12 w-auto"
               priority
             />
           </Link>
@@ -66,7 +64,7 @@ const Header = () => {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium tracking-wide transition-colors hover:text-[#1a56db] ${
+                className={`text-sm font-medium tracking-wide transition-colors hover:text-[#0891b2] ${
                   isScrolled ? "text-[#1e293b]" : "text-white"
                 }`}
               >
@@ -75,7 +73,7 @@ const Header = () => {
             ))}
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium text-white bg-[#1a56db] rounded-full hover:bg-[#1e40af] transition-all hover:shadow-lg hover:shadow-[#1a56db]/25 hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium text-white bg-[#0891b2] rounded-full hover:bg-[#0e7490] transition-all hover:shadow-lg hover:shadow-[#0891b2]/25 hover:-translate-y-0.5"
             >
               無料相談
             </Link>
@@ -104,7 +102,7 @@ const Header = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 top-20 bg-[#0f172a] md:hidden"
+            className="fixed inset-0 top-20 bg-gradient-to-b from-[#0891b2] to-[#0e7490] md:hidden"
           >
             <motion.nav
               initial={{ y: -20, opacity: 0 }}
@@ -137,7 +135,7 @@ const Header = () => {
                 <Link
                   href="/contact"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="inline-flex items-center justify-center px-8 py-3 text-lg font-medium text-white bg-[#1a56db] rounded-full hover:bg-[#1e40af] transition-all"
+                  className="inline-flex items-center justify-center px-8 py-3 text-lg font-medium text-white bg-[#0891b2] rounded-full hover:bg-[#0e7490] transition-all"
                 >
                   無料相談
                 </Link>

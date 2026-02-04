@@ -58,7 +58,7 @@ const Pricing = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-24 bg-white" ref={ref}>
+    <section className="py-24 bg-gradient-to-b from-[#f0f9ff] to-white" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -67,10 +67,10 @@ const Pricing = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <span className="text-sm font-semibold text-[#1a56db] tracking-wider uppercase">
+          <span className="text-sm font-semibold text-[#0891b2] tracking-wider uppercase">
             Price
           </span>
-          <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-[#0f172a]">
+          <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-[#1e3a5f]">
             料金プラン
           </h2>
           <p className="mt-4 text-lg text-[#64748b] max-w-2xl mx-auto">
@@ -88,14 +88,14 @@ const Pricing = () => {
               transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
               className={`relative rounded-2xl p-8 ${
                 plan.recommended
-                  ? "bg-gradient-to-br from-[#0f172a] to-[#1e3a5f] text-white shadow-2xl scale-105 z-10"
-                  : "bg-white border border-[#e2e8f0] shadow-sm"
+                  ? "bg-gradient-to-br from-[#0891b2] to-[#0e7490] text-white shadow-2xl scale-105 z-10"
+                  : "bg-white border border-[#bae6fd] shadow-sm"
               }`}
             >
               {/* Recommended Badge */}
               {plan.recommended && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="inline-flex items-center gap-1 px-4 py-1.5 text-sm font-medium text-white bg-gradient-to-r from-[#1a56db] to-[#06b6d4] rounded-full shadow-lg">
+                  <span className="inline-flex items-center gap-1 px-4 py-1.5 text-sm font-medium text-white bg-gradient-to-r from-[#f97316] to-[#fb923c] rounded-full shadow-lg">
                     <Star size={14} className="fill-current" />
                     おすすめ
                   </span>
@@ -106,14 +106,14 @@ const Pricing = () => {
               <div className="text-center mb-6">
                 <h3
                   className={`text-sm font-semibold tracking-wider uppercase ${
-                    plan.recommended ? "text-[#06b6d4]" : "text-[#1a56db]"
+                    plan.recommended ? "text-[#fef3c7]" : "text-[#0891b2]"
                   }`}
                 >
                   {plan.name}
                 </h3>
                 <p
                   className={`text-lg font-medium mt-1 ${
-                    plan.recommended ? "text-white" : "text-[#0f172a]"
+                    plan.recommended ? "text-white" : "text-[#1e3a5f]"
                   }`}
                 >
                   {plan.nameJa}
@@ -125,21 +125,21 @@ const Pricing = () => {
                 <div className="flex items-baseline justify-center gap-1">
                   <span
                     className={`text-sm ${
-                      plan.recommended ? "text-gray-300" : "text-[#64748b]"
+                      plan.recommended ? "text-white/70" : "text-[#64748b]"
                     }`}
                   >
                     ¥
                   </span>
                   <span
                     className={`text-4xl font-bold ${
-                      plan.recommended ? "text-white" : "text-[#0f172a]"
+                      plan.recommended ? "text-white" : "text-[#1e3a5f]"
                     }`}
                   >
                     {plan.price}
                   </span>
                   <span
                     className={`text-sm ${
-                      plan.recommended ? "text-gray-300" : "text-[#64748b]"
+                      plan.recommended ? "text-white/70" : "text-[#64748b]"
                     }`}
                   >
                     〜
@@ -147,7 +147,7 @@ const Pricing = () => {
                 </div>
                 <p
                   className={`text-sm mt-2 ${
-                    plan.recommended ? "text-gray-300" : "text-[#64748b]"
+                    plan.recommended ? "text-white/70" : "text-[#64748b]"
                   }`}
                 >
                   {plan.description}
@@ -161,15 +161,15 @@ const Pricing = () => {
                     <div
                       className={`w-5 h-5 rounded-full flex items-center justify-center ${
                         plan.recommended
-                          ? "bg-[#06b6d4]/20 text-[#06b6d4]"
-                          : "bg-[#1a56db]/10 text-[#1a56db]"
+                          ? "bg-white/20 text-white"
+                          : "bg-[#0891b2]/10 text-[#0891b2]"
                       }`}
                     >
                       <Check size={12} />
                     </div>
                     <span
                       className={`text-sm ${
-                        plan.recommended ? "text-gray-200" : "text-[#64748b]"
+                        plan.recommended ? "text-white/90" : "text-[#64748b]"
                       }`}
                     >
                       {feature}
@@ -183,8 +183,8 @@ const Pricing = () => {
                 href="/contact"
                 className={`block w-full py-3 px-6 text-center font-medium rounded-full transition-all ${
                   plan.recommended
-                    ? "bg-white text-[#0f172a] hover:bg-gray-100"
-                    : "bg-[#1a56db] text-white hover:bg-[#1e40af]"
+                    ? "bg-white text-[#0891b2] hover:bg-[#f0f9ff]"
+                    : "bg-[#0891b2] text-white hover:bg-[#0e7490]"
                 }`}
               >
                 相談する

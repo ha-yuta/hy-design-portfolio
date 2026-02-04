@@ -19,7 +19,7 @@ const footerLinks = {
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0f172a] text-white">
+    <footer className="bg-[#1e3a5f] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
@@ -33,7 +33,7 @@ const Footer = () => {
                 className="h-14 w-auto"
               />
             </Link>
-            <p className="mt-4 text-sm text-gray-400 leading-relaxed">
+            <p className="mt-4 text-sm text-gray-300 leading-relaxed">
               湘南・茅ヶ崎を中心に
               <br />
               ホームページ制作で活動する
@@ -41,12 +41,12 @@ const Footer = () => {
               フリーランスです。
             </p>
             <div className="mt-6 space-y-3">
-              <div className="flex items-center gap-3 text-sm text-gray-400">
-                <MapPin size={16} className="text-[#06b6d4]" />
+              <div className="flex items-center gap-3 text-sm text-gray-300">
+                <MapPin size={16} className="text-[#22d3ee]" />
                 <span>神奈川県茅ヶ崎市</span>
               </div>
-              <div className="flex items-center gap-3 text-sm text-gray-400">
-                <Mail size={16} className="text-[#06b6d4]" />
+              <div className="flex items-center gap-3 text-sm text-gray-300">
+                <Mail size={16} className="text-[#22d3ee]" />
                 <a
                   href="mailto:info@hy-webservice.com"
                   className="hover:text-white transition-colors"
@@ -59,7 +59,7 @@ const Footer = () => {
 
           {/* Pages */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#22d3ee] mb-4">
               Pages
             </h3>
             <ul className="space-y-3">
@@ -78,7 +78,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#22d3ee] mb-4">
               Services
             </h3>
             <ul className="space-y-3">
@@ -97,17 +97,17 @@ const Footer = () => {
 
           {/* Contact CTA */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#22d3ee] mb-4">
               Contact
             </h3>
-            <p className="text-sm text-gray-400 mb-4">
+            <p className="text-sm text-gray-300 mb-4">
               お気軽にご相談ください。
               <br />
               お見積りは無料です。
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-[#1a56db] rounded-full hover:bg-[#1e40af] transition-all hover:shadow-lg hover:shadow-[#1a56db]/25"
+              className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-[#1e3a5f] bg-[#22d3ee] rounded-full hover:bg-[#06b6d4] transition-all hover:shadow-lg hover:shadow-[#22d3ee]/25"
             >
               無料で相談する
             </Link>
@@ -115,8 +115,8 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="mt-16 pt-8 border-t border-gray-800">
-          <p className="text-center text-sm text-gray-500">
+        <div className="mt-16 pt-8 border-t border-[#0e7490]/30">
+          <p className="text-center text-sm text-gray-400">
             &copy; {new Date().getFullYear()} HY DESIGN. All rights reserved.
           </p>
         </div>
