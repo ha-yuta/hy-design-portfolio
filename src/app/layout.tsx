@@ -19,6 +19,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://hy-webservice.com"),
   title: {
     default: "HYデザイン | 湘南・茅ヶ崎のホームページ制作",
     template: "%s | HYデザイン",
@@ -43,6 +44,21 @@ export const metadata: Metadata = {
     title: "HYデザイン | 湘南・茅ヶ崎のホームページ制作",
     description:
       "湘南・茅ヶ崎を中心にホームページ制作で活動するフリーランス。中小企業・個人事業主に特化した成果起点のWeb設計。",
+    images: [
+      {
+        url: "/images/ogp.svg",
+        width: 1200,
+        height: 630,
+        alt: "HYデザイン - 湘南・茅ヶ崎のホームページ制作",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "HYデザイン | 湘南・茅ヶ崎のホームページ制作",
+    description:
+      "湘南・茅ヶ崎を中心にホームページ制作で活動するフリーランス。中小企業・個人事業主に特化した成果起点のWeb設計。",
+    images: ["/images/ogp.svg"],
   },
 };
 

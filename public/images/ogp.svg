@@ -1,0 +1,43 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient (ocean blue) -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0891b2"/>
+      <stop offset="50%" style="stop-color:#0e7490"/>
+      <stop offset="100%" style="stop-color:#1e3a5f"/>
+    </linearGradient>
+    <linearGradient id="waveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#22d3ee;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+
+  <!-- Decorative wave pattern -->
+  <path d="M0 450 Q300 400 600 450 T1200 450 L1200 630 L0 630 Z" fill="url(#waveGradient)"/>
+  <path d="M0 500 Q300 470 600 500 T1200 500 L1200 630 L0 630 Z" fill="rgba(255,255,255,0.05)"/>
+
+  <!-- Logo container -->
+  <g transform="translate(600, 220)">
+    <!-- HY Logo -->
+    <g transform="translate(-60, -80)">
+      <rect x="0" y="0" width="120" height="120" rx="20" fill="#1e3a5f"/>
+      <path d="M28 28C24.8 28.4 23 29.4 22 30.8C21 32.2 20.5 34.8 20.5 38V47C21.9 46 23.7 45.2 26 44.6C28.3 44 30.5 43.7 33 43.7C40 43.7 45.6 45.6 49.4 49.4C53.2 53.2 55.1 58.4 55.1 65V92H45.6V66C45.6 61.8 44.4 58.6 42 56.4C39.6 54.2 36.2 53.1 31.8 53.1C28.4 53.1 25.7 53.7 23.6 54.9C21.5 56.1 20.2 57.6 19.8 59.4V92H10V38.2C10 33.2 11.1 29.2 13.2 26.2C15.3 23.2 18.7 21.5 23.4 21L28 28Z" fill="#CDBE93"/>
+      <path d="M92 94C94 93.6 95.6 92.6 96.6 91C97.6 89.4 98.1 87 98.1 83.4V75.6C96.7 76.6 94.9 77.4 92.6 78C90.3 78.6 88.1 78.9 85.6 78.9C78.6 78.9 73 77 69.2 73.2C65.4 69.4 63.5 64.2 63.5 57.6V32H74V56.8C74 61 75.2 64.2 77.6 66.4C80 68.6 83.4 69.7 87.8 69.7C91.2 69.7 93.9 69.1 96 67.9C98.1 66.7 99.4 65.2 99.8 63.4V32H110.3V84.6C110.3 89.6 109.2 93.6 107.1 96.6C105 99.6 101.6 101.3 96.9 102L92 94Z" fill="#CDBE93"/>
+    </g>
+  </g>
+
+  <!-- Text: HYデザイン -->
+  <text x="600" y="320" font-family="'Noto Sans JP', 'Hiragino Sans', sans-serif" font-size="48" font-weight="700" fill="white" text-anchor="middle">HYデザイン</text>
+
+  <!-- Catchphrase -->
+  <text x="600" y="390" font-family="'Noto Sans JP', 'Hiragino Sans', sans-serif" font-size="32" font-weight="500" fill="rgba(255,255,255,0.9)" text-anchor="middle">想いをカタチにするWebパートナー</text>
+
+  <!-- Tagline -->
+  <text x="600" y="450" font-family="'Noto Sans JP', 'Hiragino Sans', sans-serif" font-size="20" font-weight="400" fill="rgba(255,255,255,0.7)" text-anchor="middle">湘南・茅ヶ崎のホームページ制作</text>
+
+  <!-- URL -->
+  <text x="600" y="580" font-family="Inter, sans-serif" font-size="18" font-weight="500" fill="rgba(255,255,255,0.5)" text-anchor="middle">hy-webservice.com</text>
+</svg>
