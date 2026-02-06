@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
-import { ArrowRight, MessageCircle, Phone } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
 
 const CTA = () => {
   const ref = useRef(null);
@@ -72,20 +72,6 @@ const CTA = () => {
           </Link>
         </motion.div>
 
-        {/* Contact Info */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8 text-white/90"
-        >
-          <div className="flex items-center gap-2">
-            <Phone size={18} />
-            <span className="text-sm">お電話でのお問い合わせも歓迎</span>
-          </div>
-          <div className="hidden sm:block w-px h-4 bg-white/40" />
-          <div className="text-sm">営業時間: 9:00 - 18:00（土日祝休み）</div>
-        </motion.div>
       </div>
     </section>
   );

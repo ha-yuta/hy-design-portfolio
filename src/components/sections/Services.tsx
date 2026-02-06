@@ -8,6 +8,7 @@ import {
   Globe,
   FileText,
   Database,
+  ShoppingCart,
   Settings,
   ArrowRight,
 } from "lucide-react";
@@ -30,6 +31,12 @@ const services = [
     title: "WordPress構築",
     description: "更新しやすいWordPressサイトを構築します。",
     color: "from-[#0e7490] to-[#06b6d4]",
+  },
+  {
+    icon: ShoppingCart,
+    title: "ECサイト制作",
+    description: "Shopifyを使ったネットショップを構築します。",
+    color: "from-[#0284c7] to-[#38bdf8]",
   },
   {
     icon: Settings,
@@ -65,7 +72,7 @@ const Services = () => {
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {services.map((service, index) => (
             <motion.div
               key={service.title}

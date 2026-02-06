@@ -225,9 +225,9 @@ const Hero = () => {
         }}
       />
 
-      {/* Surfer - サーフィン中のシルエット（昼〜夕方のみ） */}
+      {/* Surfer - サーフィン中のシルエット（昼〜夕方のみ、スマホでは非表示） */}
       <motion.div
-        className="absolute bottom-[37%] right-[22%] z-[5]"
+        className="absolute bottom-[37%] right-[22%] z-[5] hidden md:block"
         animate={{
           y: [0, -10, 2, -8, 0],
           x: [0, 15, 25, 35, 0],
@@ -430,29 +430,6 @@ const Hero = () => {
           </Link>
         </motion.div>
 
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-16 grid grid-cols-3 gap-8 max-w-lg mx-auto"
-        >
-          {[
-            { value: "湘南", label: "地域密着" },
-            { value: "98%", label: "満足度" },
-            { value: "5年", label: "経験年数" },
-          ].map((stat) => (
-            <div
-              key={stat.label}
-              className="text-center bg-white/80 backdrop-blur-sm rounded-2xl py-4 px-2 shadow-md"
-            >
-              <div className="text-2xl sm:text-3xl font-bold text-[#0891b2]">
-                {stat.value}
-              </div>
-              <div className="text-sm text-[#64748b] mt-1">{stat.label}</div>
-            </div>
-          ))}
-        </motion.div>
       </div>
     </section>
   );

@@ -10,44 +10,45 @@ const plans = [
   {
     name: "Light",
     nameJa: "ライトプラン",
-    price: "98,000",
+    price: "150,000",
     description: "初めてホームページを作る方に",
     features: [
-      "5ページ以内",
+      "1〜3ページ",
       "レスポンシブ対応",
-      "基本SEO対策",
       "お問い合わせフォーム",
-      "公開後1ヶ月サポート",
+      "基本SEO設定",
+      "納期：2〜3週間",
     ],
     recommended: false,
   },
   {
     name: "Standard",
     nameJa: "スタンダードプラン",
-    price: "198,000",
+    price: "300,000",
     description: "本格的なサイトを作りたい方に",
     features: [
-      "10ページ以内",
+      "5〜7ページ",
       "WordPress構築",
+      "レスポンシブ対応",
       "SEO対策・解析設定",
       "お問い合わせフォーム",
       "SNS連携",
-      "公開後3ヶ月サポート",
+      "納期：1〜1.5ヶ月",
     ],
     recommended: true,
   },
   {
     name: "Premium",
     nameJa: "プレミアムプラン",
-    price: "398,000",
+    price: "500,000",
     description: "高機能なサイトをお求めの方に",
     features: [
-      "20ページ以内",
-      "WordPress構築",
-      "フルカスタマイズ",
-      "EC・予約機能対応",
+      "10ページ以上",
+      "WordPress or フルスクラッチ",
+      "オリジナルデザイン",
       "高度なSEO対策",
-      "公開後6ヶ月サポート",
+      "予約・EC機能対応",
+      "納期：2〜3ヶ月",
     ],
     recommended: false,
   },
@@ -202,6 +203,8 @@ const Pricing = () => {
         >
           <p className="text-sm text-[#64748b]">
             ※ 料金はすべて税込です。内容により変動する場合がございます。
+            <br />
+            ※ 保守・運用サポートは別途オプションとしてご用意しております。
             <br />
             まずはお気軽にご相談ください。
           </p>
