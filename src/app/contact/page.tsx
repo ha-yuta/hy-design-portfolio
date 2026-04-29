@@ -16,6 +16,7 @@ export default function ContactPage() {
     phone: "",
     type: "",
     message: "",
+    website: "", // ハニーポット（ボット対策）
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -29,6 +30,18 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // ハニーポットチェック（ボットはこのフィールドを埋めてしまう）
+    if (formData.website) {
+      if (typeof window !== "undefined" && window.gtag) {
+        window.gtag("event", "spam_blocked", {
+          form_name: "contact",
+        });
+      }
+      // ユーザーには何も表示せずサイレントに破棄
+      return;
+    }
+
     setIsSubmitting(true);
     setError(null);
 
@@ -49,8 +62,15 @@ export default function ContactPage() {
       });
 
       if (response.ok) {
+        // GA4にform_submitイベントを送信
+        if (typeof window !== "undefined" && window.gtag) {
+          window.gtag("event", "form_submit", {
+            form_name: "contact",
+            form_destination: "formspree",
+          });
+        }
         setIsSubmitted(true);
-        setFormData({ name: "", email: "", phone: "", type: "", message: "" });
+        setFormData({ name: "", email: "", phone: "", type: "", message: "", website: "" });
       } else {
         const data = await response.json();
         throw new Error(data.error || "送信に失敗しました");
@@ -272,6 +292,27 @@ export default function ContactPage() {
                         className="w-full px-4 py-3 rounded-xl border border-[#bae6fd] bg-white text-[#1e3a5f] placeholder-[#94a3b8] focus:outline-none focus:ring-2 focus:ring-[#0891b2]/30 focus:border-[#0891b2] transition-all resize-vertical"
                       />
                     </motion.div>
+
+                    {/* ハニーポット（ボット対策 - 人間には見えない） */}
+                    <div
+                      aria-hidden="true"
+                      style={{
+                        position: "absolute",
+                        left: "-9999px",
+                        opacity: 0,
+                      }}
+                    >
+                      <label htmlFor="website">ウェブサイト</label>
+                      <input
+                        type="text"
+                        id="website"
+                        name="website"
+                        tabIndex={-1}
+                        autoComplete="off"
+                        value={formData.website}
+                        onChange={handleChange}
+                      />
+                    </div>
 
                     {/* Error Message */}
                     {error && (

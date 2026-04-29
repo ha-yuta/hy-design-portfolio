@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useSyncExternalStore } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -16,12 +16,14 @@ interface DrawerMenuProps {
   pathname: string;
 }
 
-const DrawerMenu = ({ isOpen, onClose, pathname }: DrawerMenuProps) => {
-  const [mounted, setMounted] = useState(false);
+const emptySubscribe = () => () => {};
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+const DrawerMenu = ({ isOpen, onClose, pathname }: DrawerMenuProps) => {
+  const mounted = useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false
+  );
 
   useEffect(() => {
     if (isOpen) {
