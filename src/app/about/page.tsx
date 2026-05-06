@@ -101,7 +101,7 @@ export default function AboutPage() {
               HYデザインについて
             </h1>
             <p className="mt-4 text-lg text-[#64748b] max-w-2xl mx-auto">
-              湘南・茅ヶ崎を拠点に活動するフリーランスWebデザイナーです
+              湘南・茅ヶ崎を拠点に活動するフリーランスのWeb制作パートナーです
             </p>
           </motion.div>
         </div>
