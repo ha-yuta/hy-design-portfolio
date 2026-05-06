@@ -4,7 +4,7 @@ import type { NextRequest } from "next/server";
 // WordPress時代の古いクエリパラメータをトップページへリダイレクト
 const LEGACY_WP_PARAMS = ["cat", "p", "page_id", "feed"];
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { searchParams } = request.nextUrl;
 
   // WordPressの古いクエリパラメータが含まれているかチェック
