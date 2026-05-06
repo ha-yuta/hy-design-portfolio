@@ -73,11 +73,13 @@ const localBusinessSchema = {
   description:
     "湘南・茅ヶ崎エリアの事業者向けWeb制作。企画・設計から制作・運用まで一貫支援。",
   url: "https://hy-webservice.com",
+  image: "https://hy-webservice.com/images/ogp.svg",
   areaServed: [
     { "@type": "City", name: "茅ヶ崎市" },
     { "@type": "City", name: "藤沢市" },
     { "@type": "City", name: "鎌倉市" },
     { "@type": "City", name: "平塚市" },
+    { "@type": "City", name: "寒川町" },
     { "@type": "AdministrativeArea", name: "神奈川県" },
   ],
   address: {
