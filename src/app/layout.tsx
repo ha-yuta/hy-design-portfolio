@@ -24,11 +24,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://hy-webservice.com"),
   title: {
-    default: "HYデザイン | 湘南・茅ヶ崎のホームページ制作",
+    default: "湘南・茅ヶ崎のホームページ制作｜企画から運用まで HYデザイン",
     template: "%s | HYデザイン",
   },
   description:
-    "湘南・茅ヶ崎を中心にホームページ制作で活動するフリーランス。中小企業・個人事業主に特化した成果起点のWeb設計で、あなたのビジネスをサポートします。",
+    "湘南・茅ヶ崎エリアの事業者様向けに、企画・設計から制作・運用までワンストップで伴走するホームページ制作。要件定義から保守まで、長く付き合える地域密着のWebパートナーです。",
   keywords: [
     "ホームページ制作",
     "Web制作",
@@ -44,9 +44,9 @@ export const metadata: Metadata = {
     locale: "ja_JP",
     url: "https://hy-webservice.com",
     siteName: "HYデザイン",
-    title: "HYデザイン | 湘南・茅ヶ崎のホームページ制作",
+    title: "湘南・茅ヶ崎のホームページ制作｜企画から運用まで HYデザイン",
     description:
-      "湘南・茅ヶ崎を中心にホームページ制作で活動するフリーランス。中小企業・個人事業主に特化した成果起点のWeb設計。",
+      "湘南・茅ヶ崎エリアの事業者様向けに、企画・設計から制作・運用までワンストップで伴走するホームページ制作。要件定義から保守まで、長く付き合える地域密着のWebパートナーです。",
     images: [
       {
         url: "/images/ogp.svg",
@@ -58,11 +58,42 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "HYデザイン | 湘南・茅ヶ崎のホームページ制作",
+    title: "湘南・茅ヶ崎のホームページ制作｜企画から運用まで HYデザイン",
     description:
-      "湘南・茅ヶ崎を中心にホームページ制作で活動するフリーランス。中小企業・個人事業主に特化した成果起点のWeb設計。",
+      "湘南・茅ヶ崎エリアの事業者様向けに、企画・設計から制作・運用までワンストップで伴走するホームページ制作。要件定義から保守まで、長く付き合える地域密着のWebパートナーです。",
     images: ["/images/ogp.svg"],
   },
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "HYデザイン",
+  alternateName: "HY Design",
+  description:
+    "湘南・茅ヶ崎エリアの事業者向けWeb制作。企画・設計から制作・運用まで一貫支援。",
+  url: "https://hy-webservice.com",
+  areaServed: [
+    { "@type": "City", name: "茅ヶ崎市" },
+    { "@type": "City", name: "藤沢市" },
+    { "@type": "City", name: "鎌倉市" },
+    { "@type": "City", name: "平塚市" },
+    { "@type": "AdministrativeArea", name: "神奈川県" },
+  ],
+  address: {
+    "@type": "PostalAddress",
+    addressRegion: "神奈川県",
+    addressLocality: "茅ヶ崎市",
+    addressCountry: "JP",
+  },
+  priceRange: "¥¥",
+  serviceType: [
+    "ホームページ制作",
+    "LP制作",
+    "WordPress構築",
+    "ECサイト制作",
+    "Web保守・運用",
+  ],
 };
 
 export default function RootLayout({
@@ -73,6 +104,12 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessSchema),
+          }}
+        />
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"

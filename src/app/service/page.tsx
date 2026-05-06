@@ -23,6 +23,61 @@ import {
 import LineIcon from "@/components/ui/LineIcon";
 import { LINE_URL, PRICING_PLANS } from "@/lib/constants";
 
+const faqPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "制作期間はどのくらいかかりますか？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "サイトの規模や内容によりますが、シンプルなサイトで2〜3週間、WordPressサイトで1〜2ヶ月程度が目安です。お急ぎの場合はご相談ください。",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "料金の支払いタイミングはいつですか？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "基本的に、ご契約時に着手金として50%、納品時に残り50%をお支払いいただいております。分割払いなどもご相談可能です。",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "自分で更新できるようにしてもらえますか？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "はい、WordPressで構築すれば、ブログやお知らせなどはお客様ご自身で更新できます。操作マニュアルもお渡しします。",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "写真や文章は用意する必要がありますか？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "できる範囲でご用意いただけると助かりますが、素材選定やライティングのサポートも可能です。お気軽にご相談ください。",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "公開後のサポートはありますか？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "プランに応じてサポート期間を設けております。また、保守・運用プランをご契約いただければ、継続的なサポートが可能です。",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "対面での打ち合わせは可能ですか？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "はい、湘南・茅ヶ崎エリアであれば対面でのお打ち合わせが可能です。オンラインでの打ち合わせも対応しております。",
+      },
+    },
+  ],
+};
+
 const services = [
   {
     id: "hp",
@@ -189,6 +244,12 @@ export default function ServicePage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqPageSchema),
+        }}
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-b from-[#f0f9ff] to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

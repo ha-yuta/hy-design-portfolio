@@ -382,10 +382,10 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#1e3a5f] leading-tight tracking-tight drop-shadow-sm"
         >
-          想いをカタチにする
+          事業の課題から、
           <br />
           <span className="bg-gradient-to-r from-[#0891b2] to-[#0369a1] bg-clip-text text-transparent">
-            Webパートナー
+            Webを設計する。
           </span>
         </motion.h1>
 
@@ -396,9 +396,9 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mt-6 text-lg sm:text-xl text-[#1e3a5f]/80 max-w-2xl mx-auto leading-relaxed"
         >
-          中小企業・個人事業主に特化した成果起点のWeb設計。
+          企画・要件定義から制作、運用改善まで。
           <br className="hidden sm:block" />
-          制作から運用まで、伴走型でサポートします。
+          長く伴走するWebパートナーです。
         </motion.p>
 
         {/* CTA Buttons */}
